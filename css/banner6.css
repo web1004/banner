@@ -1,0 +1,204 @@
+@import url(common.css);
+
+body{background:#f6f6f6;}
+#wrap{width:100%;}
+
+#header{
+	width:100%;
+	position:relative;
+}
+.header_in{
+	width:1200px;
+	margin:0 auto;
+	text-align:center;
+}
+h1{
+	text-align:center;
+	padding-top:400px;
+}
+
+
+/* ============ Footer 영역 ============ */
+
+#foot_banner{
+	width:100%;
+	height:200px;  
+	background:rgba(0,0,0,0.8);
+	position:absolute;
+	bottom:-140px;
+	z-index:1000;
+}
+#foot_banner .shapeUp{
+	display:block;
+ 	width:0;
+ 	height:0;
+ 	border-left:25px solid transparent;
+ 	border-right:25px solid transparent;
+ 	border-bottom:25px solid rgba(0,0,0,0.8);
+ 	position:absolute;
+	top:-25px;
+	left:50%;
+	cursor:pointer;
+}
+#foot_banner .shapeUp .up{  /*아이콘폰트(위방향화살표)*/
+	display:block;
+	color:#fff;
+	font-size:24px;
+	margin-top:6px;
+	margin-left:-12px;
+}
+.timebanner .view1{text-align:center;}
+.timebanner .view1 li{  /*모든 목록 같은 위치에 설정하고 안보이게 함*/
+	display:none;
+	position:absolute;
+	top:5px;
+	left:45%;
+	line-height:50px;
+}
+.timebanner .view1 li:first-child{display:block;}  /*첫번째 목록은 보이게 함*/
+
+.timebanner .view1 li a{
+	font-size:15px;
+	font-weight:bold;
+	color:#fff;
+	letter-spacing:1px;
+}
+.timebanner .view1 ul li>img{
+	display:inline-block;
+	margin:15px 15px 0 0;
+}
+
+
+.timebanner .view2{
+	width:1000px;
+	margin:0 auto;
+}
+.timebanner .view2 h5{
+	text-align:center;
+	color:#fff;
+	font-size:24px;
+	padding-top:30px;
+}
+.timebanner .view2 h5>span{font-weight:normal;}
+
+.timebanner .view2 ul{margin-top:20px;}
+.timebanner .view2 ul li{
+	float:left;
+	width:310px;
+	height:35px;
+	line-height:35px;
+	border:1px solid #fff;
+	margin:7px 7px;
+}
+.timebanner .view2 ul li a{
+	color:#fff;
+	font-size:15px;
+	padding-left:10px;
+}
+
+.timebanner .view2 ul li>span{
+	display:inline-block;
+	width:40px;
+	color:#fff;
+	font-size:15px;
+	border-right:1px solid #fff;
+	text-align:center;
+}
+.timebanner .view2 ul li>img{
+	display:inline-block;
+	float:right;
+	margin:7px 7px 0 0;
+}
+
+
+/*---------------------------------------*/
+#footer{position:relative;z-index:1100;background:#ebebeb;}
+
+#footer .footTop .foot_util{
+	width:100%;
+	height:55px;
+	background:#707070;
+	text-align:center;
+}
+.foot_util ul{display:inline-block;}
+.foot_util ul li{
+	float:left;
+	line-height:55px;
+	/*border-left:1px solid #ebebeb;*/
+}
+.foot_util ul li a{
+	color:#ebebeb;
+	border-left:1px solid #ebebeb;
+	padding:0 20px;
+}
+.foot_util .fr{border-left:none;}
+
+.footTop address{
+	width:100%;
+	height:120px;
+	background:#ebebeb;
+	text-align:center;
+	color:#666;
+	font-size:13px;
+	font-style:normal;
+	line-height:25px;
+	font-weight:bold;
+	padding:20px 0;
+}
+
+/*푸터 배너*/
+.footBottom{
+	width:100%;
+	height:85px;
+	line-height:85px;
+	background:#5929b1;
+	position:fixed;
+	bottom:0;
+	z-index:2000;
+}
+.footBottom .shapeDown{
+	display:block;
+	width:50px;
+	height:25px;
+	background:#79b97d;
+	border-radius:5px 5px 0 0;
+	position:absolute;
+	top:-25px;
+	right:20%;
+	cursor:pointer;
+}
+.footBottom .shapeDown .down{   /*아이콘폰트(아래방향화살표)*/
+	display:block;
+	color:#fff;
+	font-weight:bold;
+	font-size:25px;
+	margin:2px 0 0 13px;
+}
+
+.footBottom .bannerBox{
+	width:1000px;
+	height:85px;
+	margin:0 auto;
+}
+.footBottom .bannerBox img{
+	float:left;
+	margin:4px 20px 0 0;
+}
+.footBottom .bannerBox p{
+	float:left;
+	color:#fff;
+	font-size:32px;
+}
+.footBottom .bannerBox p span{font-weight:bold;}
+
+.footBottom .bannerBox button{
+	float:left;
+	margin:20px 0 0 35px;
+	width:150px;
+	height:40px;
+	border-radius:35px;
+	border:none;
+	font-size:18px;
+	color:#5929b1;
+	font-weight:bold;
+}
