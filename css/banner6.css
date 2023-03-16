@@ -30,12 +30,12 @@ h1{
 }
 #foot_banner .shapeUp{
 	display:block;
- 	width:0;
- 	height:0;
- 	border-left:25px solid transparent;
- 	border-right:25px solid transparent;
- 	border-bottom:25px solid rgba(0,0,0,0.8);
- 	position:absolute;
+	width:0;
+	height:0;
+	border-left:25px solid transparent;
+	border-right:25px solid transparent;
+	border-bottom:25px solid rgba(0,0,0,0.8);
+	position:absolute;
 	top:-25px;
 	left:50%;
 	cursor:pointer;
