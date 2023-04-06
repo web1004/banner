@@ -5,8 +5,8 @@
 	width:1200px;
 	height:150px;
 	background:yellow;	 
+	margin: auto;
 }
-
 .banner .ban{   /*슬라이드영역*/
 	width:1030px; /*보여주는 폭을 줄이고자 할때 가로폭을 맞춰서 줄여줌*/
 	height:120px;
@@ -16,17 +16,14 @@
 	left: 100px;
 	background:orange;	 
 }
-
 .banner .ban ul{
-	width:2600px;  /* 총길이=250*10+여백포함(10*10=100) */
-	position:relative;
-	/*★★★ left:-260px;  -> 이어지는 동작이 없으므로 필요없는 소스임 */	
+	display: flex;
+	position:relative;	
 }
 .banner .ban ul li{
-	float:left;
 	margin-right:10px;
-	width:250px;   /*이미지가로크기*/
-	height:120px;  /*이미지세로크기*/
+	width:250px;  
+	height:120px;  
 }
 
 /*좌우버튼*/

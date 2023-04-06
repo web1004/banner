@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     nnew=nold-1;
 
-    if(nnew>0){  
+    if(nnew>=0){  
       $(".news_list li").eq(nold).hide();
 			$(".news_list li").eq(nnew).show();
 			nold=nnew;
