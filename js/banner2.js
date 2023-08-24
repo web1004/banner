@@ -8,11 +8,11 @@ $(document).ready(function(){
     nnew=nold+1;
     nnum=$(".news_list li").length; 
 
-    if(nnew<nnum){  //이미지 전체개수보다 적으면 수행
+    if(nnew<nnum){ //이미지 전체개수보다 적으면 수행
       $(".news_list li").eq(nold).hide();
 			$(".news_list li").eq(nnew).show();
 			nold=nnew;
-    }
+    };
 
   });
 
@@ -21,11 +21,11 @@ $(document).ready(function(){
 
     nnew=nold-1;
 
-    if(nnew>=0){  
+    if(nnew>=0){ 
       $(".news_list li").eq(nold).hide();
 			$(".news_list li").eq(nnew).show();
 			nold=nnew;
-    }
+    };
 
   });
 

@@ -4,14 +4,14 @@ $(document).ready(function(){
   $(".box1").hover(function(){
     $(".box1 li:first-child").stop().animate({marginTop:"-176px"},250);
   },function(){
-    $(".box1 li:first-child").stop().animate({marginTop:"0px"},250);
+    $(".box1 li:first-child").stop().animate({marginTop:"0px"},250);    
   });
 
   //box2)위에서 아래로....
   $(".box2").hover(function(){
     $(".box2 li:first-child").stop().animate({marginTop:"0px"},250);
   },function(){
-    $(".box2 li:first-child").stop().animate({marginTop:"-176px"},250);
+    $(".box2 li:first-child").stop().animate({marginTop:"-176px"},250);    
   });
 
   //box3)오른쪽에서 왼쪽으로....
@@ -28,7 +28,8 @@ $(document).ready(function(){
     $(".box4 li:first-child").stop().animate({marginLeft:"-176px"},250);
   });
 
-  //box5)여러개의 이미지목록....
+
+  //box5)여러개의 이미지목록에서 부분올리기....
   $(".box5 ul li").hover(function(){
     $(this).find(".text").stop().animate({bottom:"0px"});
   },function(){

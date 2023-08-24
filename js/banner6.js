@@ -1,27 +1,25 @@
 $(document).ready(function(){
 
   //하단 footTop 배너 자동전화효과 함수생성___________
-
   let foldidx=0;
   let fidx=0;
 
-  function footBanner(){  
-
+  function footBanner(){ 
+    
     fidx++;
     if(fidx>5){ 
       fidx=0;
     }
 
-    $(".view1 ul li").eq(fidx).stop().fadeIn(300); //선택된 이미지
-    $(".view1 ul li").eq(foldidx).stop().fadeOut(300);  //기존 이미지	
+    $(".view1 ul li").eq(fidx).stop().fadeIn(300); 
+    $(".view1 ul li").eq(foldidx).stop().fadeOut(300);  
     foldidx=fidx; 
 
-  }
+  };
 
   setInterval(footBanner,4000);
 
   //하단 footTop 배너 UpDown_________________________
-
   $(".timebanner .view2").hide();
 
   chk1=true;
@@ -43,7 +41,6 @@ $(document).ready(function(){
     }
 
   });
-
 
   //하단 footBottom 고정배너 UpDown__________________
 
