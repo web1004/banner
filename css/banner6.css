@@ -145,9 +145,9 @@ h1{
 .footBottom{
 	width:100%;
 	height:85px;
-	line-height:85px;
 	background:#5929b1;
 	position:fixed;
+	left: 0;
 	bottom:0;
 	z-index:2000;
 }
@@ -170,23 +170,23 @@ h1{
 	margin:2px 0 0 13px;
 }
 .footBottom .bannerBox{
+	/* border: 1px solid red; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width:1000px;
 	height:85px;
-	margin:0 auto;
+	margin:auto;
 }
 .footBottom .bannerBox img{
-	float:left;
 	margin:4px 20px 0 0;
 }
 .footBottom .bannerBox p{
-	float:left;
 	color:#fff;
 	font-size:32px;
 }
 .footBottom .bannerBox p span{font-weight:bold;}
 .footBottom .bannerBox button{
-	float:left;
-	margin:20px 0 0 35px;
 	width:150px;
 	height:40px;
 	border-radius:35px;

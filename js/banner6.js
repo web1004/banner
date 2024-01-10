@@ -25,13 +25,13 @@ $(document).ready(function(){
   $(".timebanner .shapeUp").click(function(){
 
     if(chk1){
-      $(".shapeUp").html("<i class='material-icons up'>keyboard_arrow_down</i>");
+      $(".shapeUp").html("<span class='material-symbols-outlined up'>expand_more</span>");
       $("#foot_banner").stop().animate({bottom:"0px"},500);
       $(".timebanner .view2").show();
       $(".timebanner .view1").hide();
       chk1=false;
     }else{
-      $(".shapeUp").html("<i class='material-icons up'>keyboard_arrow_up</i>");
+      $(".shapeUp").html("<span class='material-symbols-outlined up'>expand_less</span>");
       $("#foot_banner").stop().animate({bottom:"-140px"},500);
       $(".timebanner .view2").hide();
       $(".timebanner .view1").show();   
@@ -47,11 +47,11 @@ $(document).ready(function(){
   $(".footBottom .shapeDown").click(function(){
 
     if(chk2){
-      $(".shapeDown").html("<i class='material-icons down'>keyboard_arrow_up</i>");
+      $(".shapeDown").html("<span class='material-symbols-outlined down'>expand_more</span>");
       $(".footBottom").stop().animate({bottom:"-85px"},500);
       chk2=false;
     }else{
-      $(".shapeDown").html("<i class='material-icons down'>keyboard_arrow_down</i>");
+      $(".shapeDown").html("<span class='material-symbols-outlined down'>expand_less</span>");
 			$(".footBottom").stop().animate({bottom:"0px"},500);
 			chk2=true;
     }
