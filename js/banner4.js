@@ -1,51 +1,48 @@
 $(document).ready(function(){
 
-  let bnum=0;
+  let banner_w= $(".ban ul li").width()+10;  //배너간 오른쪽여백이 있는 겨우 여백만큼(10px) 더해줌
+  
+  $(".ban ul li:last").prependTo(".ban ul");
+  //목록 마지막 이미지를 목록 안의 가장 앞으로 배치
+  $(".ban ul").css({ left:-banner_w});
+  //첫번째 이미지가 보여야 하므로 앞으로 온 맨뒤 이미지를 왼쪽으로 한칸 밀어두기
+
+
+  //자동으로 슬라이드 함수생성
+  function bannerAuto(){
+    $(".ban ul").stop().animate({left:"-="+banner_w+"px"},500,function(){			
+			$(".ban ul li:first-child").appendTo(".ban ul"); 
+			$(this).css({left:-banner_w}); 
+		});
+  };
+
+  bauto = setInterval(bannerAuto,4000);
 
   //다음보기
   $(".ban_btn .ban_right").click(function(){
-
-    if(bnum<6){
-      $(".ban ul").stop(true,true).animate({marginLeft:"-=260px"},500);
-      bnum++;
-
-      //이미지가 처음 또는 마지막일때 좌우버튼 이미지 바꾸기
-      if(bnum==0){
-        $(".ban_btn .ban_left").css({"background":"url(image/lbtn_on.png) no-repeat","cursor":"default"});
-      }else{
-        $(".ban_btn .ban_left").css({"background":"url(image/lbtn.png) no-repeat","cursor":"pointer"});
-      }
-      if(bnum==6){
-        $(".ban_btn .ban_right").css({"background":"url(image/rbtn_on.png) no-repeat","cursor":"default"});
-      }else{
-        $(".ban_btn .ban_right").css({"background":"url(image/rbtn.png) no-repeat","cursor":"pointer"});
-      }
-
-    }
-
+    clearInterval(bauto);
+    $(".ban ul").stop().animate({left:"-="+banner_w+"px"},500,function(){			
+			$(".ban ul li:first-child").appendTo(".ban ul"); //첫번째 이미지가 맨뒤로 이동
+			$(this).css({left:-banner_w}); //다음 움직임을 위해 초기화(최종목적지)
+		});	
+    bauto = setInterval(bannerAuto,4000);
   });
 
   //이전보기
   $(".ban_btn .ban_left").click(function(){
+    clearInterval(bauto);
+    $(".ban ul").stop().animate({left:"+="+banner_w+"px"},500,function(){			
+			$(".ban ul li:last-child").prependTo(".ban ul"); //마지막 이미지가 맨앞로 이동
+			$(this).css({left:-banner_w}); //다음 움직임을 위해 초기화(최종목적지)
+		});	
+    bauto = setInterval(bannerAuto,4000);
+  });
 
-    if(bnum>0){
-      $(".ban ul").stop(true,true).animate({marginLeft:"+=260px"},500);
-      bnum--;
-
-      //이미지가 처음 또는 마지막일때 좌우버튼 이미지 바꾸기
-      if(bnum==0){
-        $(".ban_btn .ban_left").css({"background":"url(image/lbtn_on.png) no-repeat","cursor":"default"});
-      }else{
-        $(".ban_btn .ban_left").css({"background":"url(image/lbtn.png) no-repeat","cursor":"pointer"});
-      }
-      if(bnum==6){
-        $(".ban_btn .ban_right").css({"background":"url(image/rbtn_on.png) no-repeat","cursor":"default"});
-      }else{
-        $(".ban_btn .ban_right").css({"background":"url(image/rbtn.png) no-repeat","cursor":"pointer"});
-      }
-
-    }
-
+  //마우스를 올리면 슬라이드자동함수 멈추고, 마우스를 내리면 다시 자동함수 실행.....
+  $(".ban").hover(function(){ 
+    clearInterval(bauto);
+  }, function(){
+    bauto = setInterval(bannerAuto,4000);
   });
 
 });

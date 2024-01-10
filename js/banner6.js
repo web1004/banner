@@ -4,20 +4,18 @@ $(document).ready(function(){
   let foldidx=0;
   let fidx=0;
 
-  function footBanner(){ 
-    
+  function footBanner(){     
     fidx++;
     if(fidx>5){ 
       fidx=0;
     }
 
-    $(".view1 ul li").eq(fidx).stop().fadeIn(300); 
-    $(".view1 ul li").eq(foldidx).stop().fadeOut(300);  
+    $(".view1 ul li").eq(foldidx).stop().fadeOut(300);
+    $(".view1 ul li").eq(fidx).stop().fadeIn(300);  
     foldidx=fidx; 
-
   };
-
   setInterval(footBanner,4000);
+
 
   //하단 footTop 배너 UpDown_________________________
   $(".timebanner .view2").hide();
@@ -36,14 +34,14 @@ $(document).ready(function(){
       $(".shapeUp").html("<i class='material-icons up'>keyboard_arrow_up</i>");
       $("#foot_banner").stop().animate({bottom:"-140px"},500);
       $(".timebanner .view2").hide();
-      $(".timebanner .view1").show();
+      $(".timebanner .view1").show();   
       chk1=true;
     }
 
   });
 
-  //하단 footBottom 고정배너 UpDown__________________
 
+  //하단 footBottom 고정배너 UpDown__________________
   chk2=true;
 
   $(".footBottom .shapeDown").click(function(){
@@ -57,7 +55,7 @@ $(document).ready(function(){
 			$(".footBottom").stop().animate({bottom:"0px"},500);
 			chk2=true;
     }
-
+    
   });
 
 });

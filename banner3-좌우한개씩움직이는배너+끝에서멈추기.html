@@ -3,15 +3,13 @@
 <head>
 <meta charset="utf-8"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-<title>banner6-좌우한개씩움직이는배너자동+오버시멈춤</title>
-<link rel="stylesheet" href="css/banner5.css">
+<title>banner3-좌우한개씩움직이는배너+끝에서멈추기</title>
+<link rel="stylesheet" href="css/banner3.css">
 </head>
 <body>
   <div class="banner"> 
     <div class="ban">
-      <!--좌우로 끊기지 않고 이미지를 이어지게 하려면 맨뒤의 이미지를 맨 앞으로 배치함-->
-      <ul>
-        <li><a href="#"><img src="image/ban10.jpg" alt=""></a></li>
+      <ul>	
         <li><a href="#"><img src="image/ban1.jpg" alt=""></a></li>
         <li><a href="#"><img src="image/ban2.jpg" alt=""></a></li>
         <li><a href="#"><img src="image/ban3.jpg" alt=""></a></li>
@@ -20,9 +18,11 @@
         <li><a href="#"><img src="image/ban6.jpg" alt=""></a></li>
         <li><a href="#"><img src="image/ban7.jpg" alt=""></a></li>
         <li><a href="#"><img src="image/ban8.jpg" alt=""></a></li>
-        <li><a href="#"><img src="image/ban9.jpg" alt=""></a></li>			
+        <li><a href="#"><img src="image/ban9.jpg" alt=""></a></li>	
+        <li><a href="#"><img src="image/ban10.jpg" alt=""></a></li>		
       </ul>
     </div>
+    <!--★★★ 좌우 버튼을 클릭할때 이미지가 끝나면 더이상 움직이지 않게 STOP하기 위해서는 이어지는 동작이 필요없으므로 맨 뒤의 이미지를 맨앞으로 위치할 필요는 없음-->
     
     <div class="ban_btn">
       <span class="ban_left"><span class="indent">이전글</span></span>
@@ -33,6 +33,6 @@
 <!-- Script Source -->
 <script src="js/jquery-3.7.0.min.js"></script>
 <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-<script src="js/banner5.js"></script>
+<script src="js/banner3.js"></script>
 </body>
 </html>

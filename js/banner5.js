@@ -1,45 +1,31 @@
 $(document).ready(function(){
 
-  //자동으로 슬라이드 함수생성
-  function bannerAuto(){
+  let x=0;
+  let s=-1;  //흘러가는 방향을 의미
 
-    $(".ban ul").stop(true,true).animate({marginLeft:"-=260px"},500,function(){			
-			$(".ban ul li:first-child").appendTo(".ban ul"); 
-			$(this).css({marginLeft:"0px"}); 
-		});	
+  function motion(){
+    x = x + s;
+    if ( x < -300 ) { x = 0 };
+		if ( x > 0 ) { x = -300 };
 
+    $("#gall").css({left:x});
   };
-  bauto = setInterval(bannerAuto,4000);
 
-  //다음보기
-  $(".ban_btn .ban_right").click(function(){
+  bauto = setInterval(motion,20);
 
-    clearInterval(bauto);
-    $(".ban ul").stop(true,true).animate({marginLeft:"-=260px"},500,function(){			
-			$(".ban ul li:first-child").appendTo(".ban ul"); //첫번째 이미지가 맨뒤로 이동
-			$(this).css({marginLeft:"0px"}); //최종목적지
-		});   
-    bauto = setInterval(bannerAuto,4000);
-
-  });
-
-  //이전보기
-  $(".ban_btn .ban_left").click(function(){
-
-    clearInterval(bauto);
-    $(".ban ul").stop(true,true).animate({marginLeft:"+=260px"},500,function(){			
-			$(".ban ul li:last-child").prependTo(".ban ul"); //마지막 이미지가 맨앞로 이동
-			$(this).css({marginLeft:"0px"}); //최종목적지
-		});	
-    bauto = setInterval(bannerAuto,4000);
-
-  });
-
-  //마우스를 올리면 슬라이드자동함수 멈추고, 마우스를 내리면 다시 자동함수 실행.....
-  $(".ban").hover(function(){ 
+  //오버시 멈춤
+  $("#gall").hover(function(){ 
     clearInterval(bauto);
   }, function(){
-    bauto = setInterval(bannerAuto,4000);
+    bauto = setInterval(motion,20);
+  });
+
+  //이전다음버튼
+  $(".left").click(function(){
+    s= -1;
+  });
+  $(".right").click(function(){
+    s= 1;
   });
 
 });
