@@ -1,73 +1,66 @@
 @import url(common.css);
 
-#gallery {
+#banner { /* 좌우버튼을 포함한 전체영역 */
   overflow:hidden; 
   position:relative; 
-  margin:0 auto; 
-  width: 300px; 
-  height: 150px; 
-  border:solid 2px red;
+  margin:auto; 
+  width: 800px; /* 보여지는 크기 */
+  height: 180px; 
+  border: 1px solid red;
 }
-#gall {
-  position: absolute; 
-  left: 0px; 
-  top: 20px; 
-  width: 600px; 
-  height: 100px; 
-}
-
-.set1 { 
+.banner_in {  /* 흐르는 영역 */
   position: absolute; 
   left: 0px; 
   top: 0px; 
-  width: 300px; 
+  width: 2600px; /* 복사한 것까지 포함한 총 가로너비(여백이 있다면 여백도 포함) */
   height: 100px; 
-  z-index: 1; 
-  background: #00CCFF; 
 }
-.set1 ul, .set2 ul{display: flex;}
-.set1 li { 
-  margin-right:10px; 
-  margin-top:5px; 
-  width:90px; 
-  height:90px; 
-  background:#FFFF66; 
-}
-
-.set2 { 
-  position: absolute; 
-  left: 300px; 
-  top: 0px; 
-  width: 300px; 
-  height: 100px; 
-  z-index: 1; 
-  background: #00CCFF; 
-}
-.set2 li { 
-  margin-right:10px; 
-  margin-top:5px; 
-  width:90px; 
-  height:90px; 
-  background:#FFFF66; 
-}
-
-.left { 
+.ban1 { 
   position: absolute; 
   left: 0px; 
-  bottom:0px; 
-  width: 50px; 
-  height: 20px; 
+  top: 0px; 
+  width: 1300px; /* 가로크기250 + 오른쪽마진10 = 260*5 = 1300 */
+  height: 120px; 
   z-index: 1; 
-  background: #FF0; 
-  text-align:center; 
 }
-.right { 
+.ban2 { 
   position: absolute; 
-  right: 0px; 
-  bottom:0px; 
-  width: 50px; 
-  height: 20px; 
+  left: 1300px; 
+  top: 0px; 
+  width: 1300px; 
+  height: 120px; 
   z-index: 1; 
-  background: #FF0; 
-  text-align:center;
 }
+.ban1 ul, .ban2 ul{display: flex;}
+.ban1 li, .ban2 li {  /* 배너한개의 크기 */
+  margin-right:10px; 
+  width:250px; 
+  height:120px; 
+}
+.ban1 ul li:last-child,
+.ban2 ul li:last-child{
+  margin-right: 0;
+}
+
+/*좌우버튼*/
+.ban_left{
+	position:absolute;
+	bottom:10px;
+	left:30px;
+	cursor:pointer;
+}
+.ban_right{
+	position:absolute;
+	bottom:10px;
+	right:30px;
+	cursor:pointer;
+}
+.ban_btn span{
+	display:inline-block;
+	width:17px;
+	height:27px;	
+}
+.ban_btn .ban_left{background:url(../image/main-event-left_02.png) no-repeat;}
+.ban_btn .ban_right{background:url(../image/main-event-right_02.png) no-repeat;}
+.ban_btn .ban_left:hover{background:url(../image/main-event-left_01.png) no-repeat;}
+.ban_btn .ban_right:hover{background:url(../image/main-event-right_01.png) no-repeat;}

@@ -3,32 +3,38 @@
 <head>
 <meta charset="utf-8"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-<title>banner5-계속흘러가는배너</title>
+<title>banner2-좌우버튼클릭시한개씩이동하는배너</title>
 <link rel="stylesheet" href="css/banner5.css">
 </head>
 <body>
-
-  <div id="gallery">
-    <div id="gall">
-      <div class="set1">
-        <ul>
-          <li>01</li>
-          <li>02</li>
-          <li>03</li>
-        </ul>
-      </div>      
-      <div class="set2">
-        <ul>
-          <li>01</li>
-          <li>02</li>
-          <li>03</li>
-        </ul>
-      </div>      
+<div id="banner"> <!-- 배너사이즈 250*120 -->
+	<div class="banner_in">
+    <div class="ban1">
+      <ul>
+        <li><a href="#"><img src="image/ban1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban5.jpg" alt=""></a></li>	
+      </ul>
     </div>
-    
-    <div class="left"><a href="#">prev</a></div>
-    <div class="right"><a href="#">next</a></div>
+    <!-- 한개를 더 복사 -->
+    <div class="ban2">
+      <ul>
+        <li><a href="#"><img src="image/ban1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="image/ban5.jpg" alt=""></a></li>	
+      </ul>
+    </div>
   </div>
+
+	<div class="ban_btn">
+		<span class="ban_left"><span class="indent">이전글</span></span>
+		<span class="ban_right"><span class="indent">다음글</span></span>
+	</div>
+</div>
 
 <!-- Script Source -->
 <script src="js/jquery-3.7.0.min.js"></script>

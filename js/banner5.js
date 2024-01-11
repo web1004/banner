@@ -5,27 +5,28 @@ $(document).ready(function(){
 
   function motion(){
     x = x + s;
-    if ( x < -300 ) { x = 0 };
-		if ( x > 0 ) { x = -300 };
+    if ( x < -1300 ) { x = 0 };  /* 전체폭의 반(즉 1개의 총너비) */
+		if ( x > 0 ) { x = -1300 };
 
-    $("#gall").css({left:x});
+    $(".banner_in").css({left:x});
   };
 
   bauto = setInterval(motion,20);
 
   //오버시 멈춤
-  $("#gall").hover(function(){ 
+  $(".banner_in").hover(function(){ 
     clearInterval(bauto);
   }, function(){
     bauto = setInterval(motion,20);
   });
 
   //이전다음버튼
-  $(".left").click(function(){
+  $(".ban_left").click(function(){
     s= -1;
   });
-  $(".right").click(function(){
+  $(".ban_right").click(function(){
     s= 1;
   });
+
 
 });
