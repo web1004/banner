@@ -1,10 +1,11 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
 .banner{  /*배너전체영역*/
 	position:relative;
 	width:1200px;
 	height:150px;
-	/* background:yellow;	  */
+	background:yellow;	 
 	margin: auto;
 }
 .banner .ban{   /*슬라이드영역*/
@@ -13,8 +14,8 @@
 	overflow:hidden;
 	position: absolute;
 	top: 15px;
-	left: 100px;
-	/* background:red;	  */
+	left: 85px;
+	background:red;	 
 }
 .banner .ban ul{
 	display: flex;
@@ -27,24 +28,17 @@
 }
 
 /*좌우버튼*/
-.ban_left{
-	position:absolute;
-	top:60px;
-	left:30px;
-	cursor:pointer;
+.ban_btn .fa-solid{
+  font-size: 40px;
+  color: #555;
 }
-.ban_right{
-	position:absolute;
-	top:60px;
-	right:30px;
-	cursor:pointer;
+.ban_btn .ban_left,
+.ban_btn .ban_right{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.ban_btn span{
-	display:inline-block;
-	width:17px;
-	height:27px;	
-}
-.ban_btn .ban_left{background:url(../image/main-event-left_02.png) no-repeat;}
-.ban_btn .ban_right{background:url(../image/main-event-right_02.png) no-repeat;}
-.ban_btn .ban_left:hover{background:url(../image/main-event-left_01.png) no-repeat;}
-.ban_btn .ban_right:hover{background:url(../image/main-event-right_01.png) no-repeat;}
+.ban_btn .ban_left{left: 30px;}
+.ban_btn .ban_right{right: 30px;}
+.ban_btn .ban_left:hover,
+.ban_btn .ban_right:hover{opacity: 0.3;}

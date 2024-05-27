@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8"> 
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <title>banner3-좌우한개씩움직이는배너+끝에서멈추기</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="css/banner3.css">
 </head>
 <body>
@@ -22,11 +22,12 @@
         <li><a href="#"><img src="image/ban10.jpg" alt=""></a></li>		
       </ul>
     </div>
-    <!--★★★ 좌우 버튼을 클릭할때 이미지가 끝나면 더이상 움직이지 않게 STOP하기 위해서는 이어지는 동작이 필요없으므로 맨 뒤의 이미지를 맨앞으로 위치할 필요는 없음-->
     
     <div class="ban_btn">
-      <span class="ban_left"><span class="indent">이전글</span></span>
-      <span class="ban_right"><span class="indent">다음글</span></span>
+      <a class="ban_left" href="#none"><i class="fa-solid fa-caret-left"></i></a>
+      <!-- <i class="fa-solid fa-backward-step"></i> -->
+      <a class="ban_right" href="#none"><i class="fa-solid fa-caret-right"></i></a>
+      <!-- <i class="fa-solid fa-forward-step"></i> -->
     </div>
   </div>
 
