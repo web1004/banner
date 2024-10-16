@@ -34,14 +34,14 @@
 	width: 100%;
 	height: 300px;
 }
-.news_list li{
+.news_list li{  /* 모든 뉴스내용을 동일한 위치에 설정하고 모두 안보이게 함 */
 	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
 	display:none;
 }
-.news_list li:first-child{display:inline-block;}
+.news_list li:first-child{display:inline-block;}  /* 첫번째거만 보이게 함 */
 .news_img{
 	float: left;
 	width: 250px;
